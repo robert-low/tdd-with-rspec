@@ -14,7 +14,7 @@ RSpec.describe ProgrammingLanaguage do
   end
 
   context 'with no initialisation argument' do
-    let(:langugae) { ProgrammingLanaguage.new }
+    let(:language) { ProgrammingLanaguage.new }
     #however nested variables overwrite parent variables
 
     it 'should default to "Ruby" as the name' do
