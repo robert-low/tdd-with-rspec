@@ -20,4 +20,21 @@ RSpec.describe 'equality matchers' do
       expect(b).to eql(3)
     end
   end
+
+  describe 'equal and be matcher' do
+    let(:c) { [1, 2, 3] }
+    let(:d) { [1, 2, 3] }
+    let(:e) { c }
+    # c and d are equal but not identitical. e and c are equal AND identical
+    it 'cares about object identity' do
+      expect(c).to equal(e)
+      # an alias of equal is 'be'
+      expect(c).to be(e)
+
+      expect(c).not_to equal(d)
+    end
+  end
 end
+
+
+# equality checks that two things are equal, identity checks that two things are the same object
