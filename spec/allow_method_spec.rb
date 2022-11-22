@@ -26,3 +26,5 @@ RSpec.describe 'allow method review' do
     expect(mock_array.pop).to eq(nil)
   end
 end
+
+test
